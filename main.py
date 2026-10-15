@@ -44,7 +44,7 @@ def main():
         if item.is_file():
             item.unlink()
 
-    packets = sniff(offline = "sample_data.pcap")
+    packets = sniff(offline = "data/sample_data.pcap")
 
 
     # non blocking sniffer
