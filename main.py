@@ -40,7 +40,11 @@ def main():
     folder = Path("Addresses")
     folder.mkdir(parents=True, exist_ok=True)
 
-    packets = sniff(offline = "capture.pcap")
+    for item in folder.iterdir():
+        if item.is_file():
+            item.unlink()
+
+    packets = sniff(offline = "sample_data.pcap")
 
 
     # non blocking sniffer
@@ -87,14 +91,13 @@ def main():
     
     # interface (text)
     while True:
-        selectIP = input("Enter IP (default 192.168.1.73): ")
+        selectIP = input("Enter IP (default 114.213.235.250): ")
 
         if not selectIP:
-            selectIP = "192.168.1.73"
+            selectIP = "114.213.235.250"
             break
         elif selectIP not in ip_collection:
             print("Invalid IP, not one of the options.")
-            selectIP = "192.168.1.73"
             continue
         else:
             break
