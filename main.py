@@ -56,7 +56,7 @@ def main():
     for p in packets:
         process_packet(p)
 
-    print("---FOUND IPs---")
+    print("-----------------------IP Record List -----------------------")
     for ip in ip_collection:
         print(ip)
 
@@ -83,6 +83,29 @@ def main():
         with open(str(directory), "w") as file:
             json.dump(data, file, indent = 4)
 
+    # end of packet processing
+    
+    # interface (text)
+    while True:
+        selectIP = input("Enter IP (default 192.168.1.73): ")
+
+        if not selectIP:
+            selectIP = "192.168.1.73"
+            break
+        elif selectIP not in ip_collection:
+            print("Invalid IP, not one of the options.")
+            selectIP = "192.168.1.73"
+            continue
+        else:
+            break
+
+    print("\n\nList Of Connections for " + selectIP + ":")
+    
+    with open("./Addresses/" + selectIP + ".json") as file:
+        data = json.load(file)
+
+        for c in data["connections"]:
+            print("["+ c["timestamp"] + "]\t" + f"{data["ip"]} -> {c["dst"]}\tprotocol={c["protocol"]}")
 
 if __name__ == "__main__":
     main()
