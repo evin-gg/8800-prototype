@@ -1,3 +1,5 @@
-.venv
-.git
-
+.venv/
+.git/
+capture.pcap
+pyrightconfig.json
+/Addresses
