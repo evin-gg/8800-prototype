@@ -5,6 +5,9 @@ the IP addresses and their connections into a data structure
 which is essential for the final product.
 
 ## Requirements
+this project has only been tested on a linux environment
+sudo access is required to read and write files within the directory
+
 Python3
 
 ## Installation
