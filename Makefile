@@ -1,2 +1,2 @@
 all:
-	sudo .venv/bin/python main.py
+	sudo .venv/bin/python3 main.py
