@@ -27,6 +27,7 @@ make run
 
 running the program should prompt you to enter one of the listed IP addresses
 you can enter one of the listed IPs or press enter for the default.
+
 Example:
 ```bash
 -----------------------IP Record List -----------------------
