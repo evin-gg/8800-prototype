@@ -7,3 +7,4 @@ run:
 
 clean:
 	rm -rf .venv
+	sudo rm -rf Addresses
