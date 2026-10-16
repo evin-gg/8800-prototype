@@ -37,7 +37,7 @@ Example:
 Enter IP (default 114.213.235.250):
 ```
 ## Cleanup
-to remove virtual environment run:
+to remove virtual environment and Address folder run:
 ```bash
 make clean
 ```
