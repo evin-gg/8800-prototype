@@ -2,7 +2,7 @@
 This is a prototype of a core feature in the 8800 project
 course. It takes a pcap dataset and distinguishes all of
 the IP addresses and their connections into a data structure
-which is essential for the final product.
+which is conceptually essential for the final product.
 
 ## Requirements
 this project has only been tested on a linux environment
